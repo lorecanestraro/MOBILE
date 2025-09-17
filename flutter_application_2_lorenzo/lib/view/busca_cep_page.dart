@@ -74,7 +74,14 @@ class _BuscaCepPageState extends State<BuscaCepPage> {
                       );
                     default:
                       if (snapshot.hasError) {
-                        return Container();
+                        return Padding(
+                          padding: EdgeInsets.only(top: 20),
+                          child: Text(
+                            "Erro ao buscar CEP: ${snapshot.error}",
+                            style: TextStyle(color: Colors.red, fontSize: 18),
+                            textAlign: TextAlign.center,
+                          ),
+                        );
                       } else {
                         return exibeResultado(context, snapshot);
                       }
@@ -90,9 +97,10 @@ class _BuscaCepPageState extends State<BuscaCepPage> {
 
   Widget exibeResultado(BuildContext context, AsyncSnapshot snapshot) {
     String enderecoCompleto = '';
-    if(snapshot.data != null){
+    if (snapshot.data != null) {
       enderecoCompleto += snapshot.data["street"] ?? "Rua não disponível";
-      enderecoCompleto += snapshot.data["neigborhood"] ?? "Bairro não disponivel";
+      enderecoCompleto +=
+          snapshot.data["neigborhood"] ?? "Bairro não disponivel";
       enderecoCompleto += snapshot.data["city"] ?? "Cidade não disponível";
       enderecoCompleto += snapshot.data["state"] ?? "Estado não disponível";
     }

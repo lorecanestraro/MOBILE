@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2_lorenzo/view/busca_cep_page.dart';
 import 'package:flutter_application_2_lorenzo/view/por_extenso_page.dart';
+import 'package:flutter_application_2_lorenzo/view/conversao_moeda_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -38,9 +39,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              onTap: (){
-                Navigator.push(context,
-                MaterialPageRoute(builder: (context) => PorExtensoPage()));
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PorExtensoPage()),
+                );
               },
             ),
             SizedBox(height: 30),
@@ -55,9 +58,29 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              onTap: (){
-                Navigator.push(context,
-                MaterialPageRoute(builder: (context) => BuscaCepPage()));
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BuscaCepPage()),
+                );
+              },
+            ),
+            GestureDetector(
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.monetization_on, color: Colors.white, size: 50.0),
+                  SizedBox(width: 30),
+                  Text(
+                    "Conversão de Moeda",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ],
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ConversaoMoedaPage()),
+                );
               },
             ),
           ],
