@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "369740655739",
+    "project_id": "auth-tb-e28aa",
+    "storage_bucket": "auth-tb-e28aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369740655739:android:d936169a17645fff63c6de",
+        "android_client_info": {
+          "package_name": "com.example.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4EtbPCI38VqzudSQyOXqVwT1oufhldQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
