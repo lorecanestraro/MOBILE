@@ -243,7 +243,7 @@ class _RecipePageState extends State<RecipePage> {
                   });
                 },
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 80),
             ],
           ),
         ),
